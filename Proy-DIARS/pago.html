@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viaticos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="main.css">
+    <script src="main12.js"></script>
+    <script src="menu.js"></script>
+</head>
+<body>
+    
+    
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">DIARS</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="menu">  </ul> 
+          </div>
+        </div>
+      </nav>
+
+
+
+    <div class="container">
+        <div class="row"> 
+            <div class="col-12 my-5 text-center">
+                <h1><strong>GENERAR PAGO DE VIATICOS</strong></h1>
+            </div>
+
+            <div class="col-12"> 
+                    <a href="#" class="d-none fw-bold btn btn-primary mb-3 new-btn"  data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        Agregar
+                    </a>
+
+                    <table class="table mt-5">
+                      <thead class="table-dark"> 
+                          <tr>
+                              <th scope="col">Codigo</th>
+                              <th scope="col">Descripción </th>
+                              <th scope="col">Fecha</th>
+                              <th scope="col">Dirigido</th> 
+                              <th scope="col">DNI</th> 
+                              <th scope="col">Acciones</th>
+                          </tr>
+                      </thead>
+                      <tbody id="bodyTable2">
+                           
+                      </tbody>
+                    </table>
+
+
+                    <table class="table mt-5">
+                        <thead class="table-dark"> 
+                            <tr>
+                                <th scope="col">Codigo</th>
+                                <th scope="col">Descripción </th>
+                                <th scope="col">Fecha</th>
+                                <th scope="col">Dirigido</th> 
+                                <th scope="col">DNI</th> 
+                                <th scope="col">Total a Pagar</th> 
+                                <th scope="col">Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody id="bodyTable">
+                             
+                        </tbody>
+                    </table>
+            </div>
+        </div>
+    </div>
+
+ 
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="trickTitle">Registrar Pago</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form id="formInicio"> 
+                <div class="mb-3"> <input type="text"    id="codigo2"       name="codigo2"  class="form-control" placeholder="Codigo"></div> 
+                <div class="mb-3"> <input type="text"    id="des"           name="des"  class="form-control" placeholder="Descripción"> </div> 
+                <div class="mb-3"> <input type="date"    id="fecha2"        name="fecha2"  class="form-control" placeholder="Fecha "></div> 
+                <div class="mb-3"> <input type="text"    id="dir"           name="dir"  class="form-control" placeholder="Dirigido"> </div> 
+                <div class="mb-3"> <input type="number"  id="dni"           name="dni"  class="form-control" placeholder="DNI"> </div> 
+                <div class="mb-3"> <input type="number"  id="total"         name="total"  class="form-control" placeholder="Total a Pagar"> </div> 
+               
+ 
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="submit" class="btn btn-primary">Guardar</button>
+                  </div>
+            </form>
+          </div>
+         
+        </div>
+      </div>
+    </div>
+    
+
+    <template id="temp_table2">
+        <tr>
+            <th class="cod">1</th>
+            <td class="des">Mark</td>
+            <td class="fec">Otto</td>
+            <td class="dir">@mdo</td>
+            <td class="dni">@mdo</td>
+            <td class="pagar">@mdo</td>
+            <td>
+                <a href="#" class="fw-bold btn btn-warning gaturro"  data-bs-toggle="modal" data-bs-target="#exampleModal" >Actualizar</a>
+                <a href="#" class="fw-bold btn btn-danger" >Eliminar</a>
+            </td>
+        </tr> 
+    </template>
+ 
+
+    <template id="temp_table3">
+      <tr>
+          <th class="cod">1</th>
+          <td class="des">Mark</td>
+          <td class="fec">Otto</td>
+          <td class="dir">@mdo</td>
+          <td class="dni">@mdo</td>
+          <td>
+              <a href="#" class="fw-bold btn btn-warning balls"  data-bs-toggle="modal" data-bs-target="#exampleModal" >Actualizar</a>
+           </td>
+      </tr> 
+  </template>
+
+
+</body>
+</html>

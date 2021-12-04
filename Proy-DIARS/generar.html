@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="main.css">
+    <script src="main2.js"></script>
+    <script src="menu.js"></script>
+</head>
+<body>
+    
+    
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">DIARS</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="menu">  </ul> 
+          </div>
+        </div>
+      </nav>
+
+
+
+    <div class="container">
+        <div class="row"> 
+            <div class="col-12 my-5 text-center">
+                <h1><strong>GENERAR EXPEDIENTES</strong></h1>
+            </div>
+
+            <div class="col-12"> 
+                    <a href="#" class="fw-bold btn btn-primary mb-3 new-btn"  data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        Nuevo
+                    </a>
+
+                    <table class="table">
+                        <thead class="table-dark"> 
+                            <tr>
+                                <th scope="col">Codigo</th>
+                                <th scope="col">Descripción</th>
+                                <th scope="col">Fecha registrada</th>
+                                <th scope="col">Codigo Tramite</th>
+                                <th scope="col">Imagenes</th>
+                                <th scope="col">Medidas Seguridad</th>
+                                <th scope="col">Tecnologia</th>
+                                <th scope="col">Aulas Optimas</th>
+                                <th scope="col">Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody id="bodyTable">
+                             
+                        </tbody>
+                    </table>
+            </div>
+        </div>
+    </div>
+
+ 
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="trickTitle">Registrar Tramite</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form id="formInicio"> 
+                <div class="mb-3"> <input type="text"  id="codigo2" name="codigo2" class="form-control" placeholder="Codigo"></div> 
+                <div class="mb-3"><input type="text"   id="descripcion2"  name="descripcion2" class="form-control" placeholder="Descripción"> </div> 
+                <div class="mb-3"> <input type="date"  id="fecha2"   name="fecha2" class="form-control" placeholder="Fecha de Registro"></div> 
+                <div class="mb-3"> <input type="text"  id="cod_tramite2"   name="cod_tramite2" class="form-control" placeholder="Codigo Tramite"> </div> 
+                <div class="mb-3"> 
+                    <label for="" class="mb-2">Adjunto Imagenes?</label>
+                    <div class="form-check">
+                        <input class="form-check-input" value="SI" type="radio" name="dab" id="ad_img1">
+                        <label class="form-check-label" for="ad_img1">
+                          SI
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" value="NO" type="radio" name="dab" id="ad_img2" checked>
+                        <label class="form-check-label" for="ad_img2">
+                          NO
+                        </label>
+                      </div>    
+                </div> 
+
+                <div class="mb-3"> 
+                    <label for="" class="mb-2">Cuenta con las medidas de seguridad?</label>
+                    <div class="form-check">
+                        <input class="form-check-input" value="SI" type="radio" name="seguridad" id="seguridad1">
+                        <label class="form-check-label" for="seguridad1">
+                          SI
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" value="NO" type="radio" name="seguridad" id="seguridad2" checked>
+                        <label class="form-check-label" for="seguridad2">
+                          NO
+                        </label>
+                      </div>    
+                </div> 
+
+                <div class="mb-3"> 
+                    <label for="" class="mb-2">Cuenta con la tecnologia adecuada?</label>
+                    <div class="form-check">
+                        <input class="form-check-input" value="SI" type="radio" name="tecnologia" id="tec1">
+                        <label class="form-check-label" for="tec1">
+                          SI
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" value="NO" type="radio" name="tecnologia" id="tec2" checked>
+                        <label class="form-check-label" for="tec2">
+                          NO
+                        </label>
+                      </div>    
+                </div>  
+                
+                <div class="mb-3"> 
+                    <label for="" class="mb-2">Aulas en optimas condiciones?</label>
+                    <div class="form-check">
+                        <input class="form-check-input" value="SI" type="radio" name="con" id="con1">
+                        <label class="form-check-label" for="con1">
+                          SI
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" value="NO" type="radio" name="con" id="con2" checked>
+                        <label class="form-check-label" for="con2">
+                          NO
+                        </label>
+                      </div>    
+                </div> 
+
+
+                 
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="submit" class="btn btn-primary">Guardar</button>
+                  </div>
+            </form>
+          </div>
+         
+        </div>
+      </div>
+    </div>
+    
+
+   
+
+    <template id="temp_table2">
+        <tr>
+            <th class="cod">1</th>
+            <td class="des">Mark</td>
+            <td class="fec">Otto</td>
+            <td class="cod_tra">@mdo</td>
+            <td class="ad_img">@mdo</td>
+            <td class="seg">@mdo</td>
+            <td class="tec">@mdo</td>
+            <td class="aulas">@mdo</td>
+            <td>
+                <a href="#" class="fw-bold btn btn-warning"  data-bs-toggle="modal" data-bs-target="#exampleModal" >Actualizar</a>
+                <a href="#" class="fw-bold btn btn-danger" >Eliminar</a>
+            </td>
+        </tr> 
+    </template>
+ 
+
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro Resolucion</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="main.css">
+    <script src="main15.js"></script>
+    <script src="menu.js"></script>
+</head>
+<body>
+    
+    
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">DIARS</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="menu">  </ul> 
+          </div>
+        </div>
+      </nav>
+
+
+    <div class="container">
+        <div class="row"> 
+            <div class="col-12 my-5 text-center">
+                <h1><strong>REGISTRO RESOLUCIÓN DIRECTORIAL</strong></h1>
+            </div>
+
+            <div class="col-12"> 
+                    <a href="#" class="fw-bold btn btn-primary mb-3 new-btn"  data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        Nuevo Registro
+                    </a>
+
+                    <table class="table">
+                        <thead class="table-dark"> 
+                            <tr>
+                                <th scope="col">N° Informe</th>
+                                <th scope="col">Fecha</th>
+                                <th scope="col">Descripción </th>
+                                <th scope="col">Cod. Usuario</th> 
+                                <th scope="col">Cod. Director</th> 
+                                <th scope="col">Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody id="bodyTable">
+                             
+                        </tbody>
+                    </table>
+            </div>
+        </div>
+    </div>
+
+ 
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="trickTitle">Registrar Información</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form id="formInicio"> 
+                <div class="mb-3"> <input type="text"    id="regi"          name="regi"  class="form-control" placeholder="N° de Registro"></div> 
+                <div class="mb-3"> <input type="date"    id="fecha2"        name="fecha2"  class="form-control" placeholder="Fecha"></div> 
+                <div class="mb-3"> <input type="text"    id="nombre"        name="nombre"  class="form-control" placeholder="Nombre Usuario"> </div> 
+                <div class="mb-3"> <input type="text"    id="apellido"      name="apellido"  class="form-control" placeholder="Apellido Usuario"> </div> 
+                <div class="mb-3"> <input type="text"    id="codigo"        name="codigo"  class="form-control" placeholder="Codigo Usuario"> </div> 
+                <div class="mb-3"> <input type="text"    id="des"           name="des"  class="form-control" placeholder="Descripción"> </div>
+                <div class="mb-3"> <input type="text"    id="cod_dire"      name="cod_dire"  class="form-control" placeholder="Codigo Director"> </div>
+                <div class="mb-3"> <input type="text"    id="full_name"     name="full_name"  class="form-control" placeholder="Nombre y Apellido Director"> </div>
+              
+ 
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="submit" class="btn btn-primary">Guardar</button>
+                  </div>
+            </form>
+          </div>
+         
+        </div>
+      </div>
+    </div>
+    
+
+    <template id="temp_table2">
+        <tr>
+            <th class="info">1</th>
+            <td class="fec">Otto</td>
+            <td class="des">Mark</td>
+            <td class="cod_user">@mdo</td>
+            <td class="cod_dire">@mdo</td>
+            <td>
+                <a href="#" class="fw-bold btn btn-warning"  data-bs-toggle="modal" data-bs-target="#exampleModal" >Actualizar</a>
+                <a href="#" class="fw-bold btn btn-danger" >Eliminar</a>
+            </td>
+        </tr> 
+    </template>
+ 
+
+</body>
+</html>
